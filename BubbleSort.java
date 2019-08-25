@@ -1,24 +1,26 @@
 import java.util.*;
-public class Bubblesort{
-  public static void main(String []args){
-        int temp; 
-        int a[] = {20,15,9,12,7,1};
-        for(int i=0;i<a.length-1;i++)
+
+public class BubbleSort{
+
+     public static void main(String []args){
+        int i,j,temp;
+        int arr[] = {12,8,6,4,1};
+        int size = arr.length;
+        for(i=0;i<size-1;i++)
         {
-            for(int j=0;j<a.length-1-i;j++)
+            for(j=0;j<size-i-1;j++)
             {
-                if(a[j]>a[j+1])
+                if(arr[j]>arr[j+1])
                 {
-                  temp=a[j+1];
-                  a[j+1]=a[j];
-                  a[j]=temp;  
-                }  
+                    temp=arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j]=temp;
+                }
             }
         }
-        for(int i=0;i<a.length;i++)
+        for(i=0;i<size;i++)
         {
-         System.out.println(""+a[i]);
+        System.out.println("Bubble sort is " +arr[i]);
         }
-    }
+     }
 }
-
